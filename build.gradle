@@ -146,6 +146,7 @@ if (tasks.names.contains('build')) {
 task codeCoverageReport(type: JacocoReport) {
     dependsOn('newrelic-extension-ballerina:extractBallerinaClassFiles')
     dependsOn('newrelic-extension-native:copyJavaClassFiles')
+    dependsOn(':newrelic-extension-native:jacocoTestReport')
 
     executionData fileTree(project.rootDir.absolutePath) {
         include "**/*.exec"

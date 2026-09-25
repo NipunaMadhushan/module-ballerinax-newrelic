@@ -42,12 +42,12 @@ rootProject.name = 'module-ballerinax-newrelic'
 include(':build-config:checkstyle')
 include(':newrelic-extension-ballerina')
 include(':newrelic-extension-native')
-//include(':newrelic-extension-tests')
+include(':newrelic-extension-tests')
 
 project(':build-config:checkstyle').projectDir = file('build-config/checkstyle')
 project(':newrelic-extension-ballerina').projectDir = file('ballerina')
 project(':newrelic-extension-native').projectDir = file('native')
-//project(':newrelic-extension-tests').projectDir = file('tests')
+project(':newrelic-extension-tests').projectDir = file('ballerina-tests')
 
 develocity {
     buildScan {
